@@ -4,7 +4,7 @@
   "description": "A Test Module for messing with building a node package that includes EJS templates",
   "main": "test_module.js",
   "scripts": {
-    "start": "nodemon -e js ./test/www"
+    "demo": "nodemon -e js ./demo/www"
   },
   "author": "Jeff Caradona",
   "license": "ISC",
