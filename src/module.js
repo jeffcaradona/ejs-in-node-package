@@ -3,7 +3,7 @@ console.log('IN module.js');
 let ejs = require('ejs');
 
 let moduleData = {
-    html: [],
+    html: '',
     local: {
         message: '',
         port: null
@@ -25,14 +25,14 @@ async function renderListold() {
 
 const  renderDataAsList = () => {
     console.log('IN test_moddule.renderDataAsList()');
-
+    const promise = ejs.renderFile('./node_modules/@jeffcaradona/ejs-in-node-package/src/views/partials/list.ejs', { moduleData: moduleData.local });
 
     return (req, res, next) => {
         console.log('IN test_moddule.renderDataAsList() middleware ');        
-        const promise = ejs.renderFile('./node_modules/@jeffcaradona/ejs-in-node-package/src/views/partials/list.ejs', { moduleData: moduleData.local });
-        promise.then((html) => {
-            console.info(html);
-            Array(moduleData.html).push({'unorderedlist':html});
+        
+        promise.then((html) => {  
+            moduleData.html = html     
+            console.info(moduleData.html);
             next();
         });
     }
