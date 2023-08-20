@@ -1,6 +1,6 @@
 {
   "name": "@jeffcaradona/ejs-in-node-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Test Module for messing with building a node package that includes EJS templates",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "nodemon": "^3.0.1"
   },
   "dependencies": {
-    "@jeffcaradona/ejs-in-node-package": "^0.0.1",
+    "@jeffcaradona/ejs-in-node-package": "^0.0.2",
     "ejs": "^3.1.9"
   }
 }

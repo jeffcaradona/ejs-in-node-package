@@ -6,16 +6,19 @@ const ejs = require('ejs');
 const app = express();
 app.set('view engine', 'ejs');
 
-const test_module = require('../test_module');
+const test_module = require('@jeffcaradona/ejs-in-node-package');
 
 app.use(test_module.init(), test_module.setMessage('Hello'), test_module.setPort(port));
 
+let  promise = test_module.renderList();
 
 app.get('/', (req, res) => {
   console.log('IN get / route');
-  test_module.renderList().then((html) => {
-    res.render('./../demo/views/index', { html: html });
+
+  promise.then(ul => {
+    res.render('./../demo/views/index', { html: ul });
   });
+  
   
 });
 

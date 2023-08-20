@@ -15,7 +15,7 @@ let moduleData = {
  */
 async function renderList() {
     console.log('IN test_moddule.renderList()');    
-    const html = await ejs.renderFile('./src/views/partials/list.ejs',{moduleData:moduleData})
+    const html = await ejs.renderFile('./node_modules/@jeffcaradona/ejs-in-node-package/src/views/partials/list.ejs',{moduleData:moduleData})
     return html
 } 
 
