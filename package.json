@@ -1,7 +1,7 @@
 {
   "name": "test-module",
   "version": "0.0.1",
-  "description": "A Test Module for messing with building a node package",
+  "description": "A Test Module for messing with building a node package that includes EJS templates",
   "main": "test_module.js",
   "scripts": {
     "start": "nodemon -e js ./test/www"
