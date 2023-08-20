@@ -1,0 +1,5 @@
+<ul>
+  <%Object.keys(moduleData).forEach((key) => { %> 
+    <%- `<li>${key}: ${moduleData[key]}</li>` %>
+  <% });  %>
+</ul>
