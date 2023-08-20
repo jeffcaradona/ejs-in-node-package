@@ -1,10 +1,10 @@
 {
-  "name": "ejs-in-node-package",
+  "name": "@jeffcaradona/ejs-in-node-package",
   "version": "0.0.1",
   "description": "A Test Module for messing with building a node package that includes EJS templates",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeffcaradona/ejs-in-node-package.git"
+    "url": "git+https://github.com/jeffcaradona/ejs-in-node-package.git"
   },
   "main": "test_module.js",
   "scripts": {
